@@ -1,0 +1,48 @@
+@use "../settings/vars" as *;
+
+.footer {
+  padding: 40px 0;
+  background-image: url("./img/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  &__address {
+    font-size: 42px;
+    margin-bottom: 20px;
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 24px;
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__phone {
+    font-size: 32px;
+    color: $mainColor;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $red;
+    }
+    @media (max-width: 600px) {
+      font-size: 24px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+}

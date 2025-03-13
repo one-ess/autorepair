@@ -1,0 +1,75 @@
+@use "../settings/vars" as *;
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.modal-wrapper_active {
+  overflow-y: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  background: linear-gradient(150.31deg, rgba(255, 255, 255, 0.2705) -15.73%, rgba(255, 255, 255, 0) 104.81%);
+  backdrop-filter: blur(10px);
+  will-change: transform;
+
+  &__text {
+    margin-bottom: 25px;
+    text-align: center;
+    @media (max-width: 500px) {
+      margin-bottom: 15px;
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+
+  &__input {
+    margin-bottom: 13px;
+    align-self: center;
+    background-color: #131313;
+  }
+
+  &__submit {
+    margin-top: 10px;
+    align-self: center;
+  }
+
+  &__button-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 23px;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+  }
+}

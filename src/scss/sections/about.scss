@@ -1,0 +1,160 @@
+.about {
+  padding: 100px 0;
+  background-image: url("./img/about-bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (max-width: 500px) {
+    padding: 50px 0;
+  }
+
+  &__list {
+    display: flex;
+    margin-bottom: 75px;
+    row-gap: 15px;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 0 1 25%;
+    padding: 0 10px;
+  }
+
+  &__number {
+    font-family: "Rubik";
+    font-size: 55px;
+    line-height: 1.1;
+    color: #000;
+    text-shadow: 0px 4px 20px rgba(255, 0, 0, 0.47);
+    -webkit-text-stroke: 2px white;
+    @media (max-width: 500px) {
+      font-size: 48px;
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 1.1;
+    @media (max-width: 500px) {
+      font-size: 16px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @media (max-width: 1200px) {
+      flex-direction: column-reverse;
+      row-gap: 30px;
+    }
+  }
+
+  &__video {
+    max-width: 750px;
+    width: 100%;
+  }
+
+  &__info {
+    max-width: 390px;
+    @media (max-width: 1200px) {
+      max-width: 720px;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 600;
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
+  }
+
+  &__content-text {
+    line-height: 1.1;
+    font-weight: 400;
+    p {
+      &:first-child {
+        margin-bottom: 15px;
+      }
+
+      &:last-child {
+        margin-top: 15px;
+      }
+    }
+    @media (max-width: 500px) {
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: rgba(31, 31, 31, 0.6);
+      backdrop-filter: blur(7px);
+    }
+  }
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; // нужен чтобы видео было 16/9 формата
+  background-color: #000;
+
+  &:hover {
+    .video__button-shape {
+      fill: #ff0000;
+      fill-opacity: 1;
+    }
+  }
+
+  &__inner {
+    cursor: pointer;
+  }
+
+  &__media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      .video__button-shape {
+        fill: #ff0000;
+        fill-opacity: 1;
+      }
+    }
+  }
+
+  &__button-shape {
+    fill: #212121;
+    fill-opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &__button-icon {
+    fill: #fff;
+    cursor: pointer;
+  }
+}

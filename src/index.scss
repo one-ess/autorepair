@@ -1,0 +1,16 @@
+@use "./scss/settings/fonts";
+@use "./scss/settings/null";
+@use "./scss/settings/base";
+
+@use "swiper/css/bundle";
+
+@use "./scss/global/global";
+@use "./scss/global/modal";
+
+@use "./scss/sections/header";
+@use "./scss/sections/about";
+@use "./scss/sections/services";
+@use "./scss/sections/cost";
+@use "./scss/sections/portfolio";
+@use "./scss/sections/request";
+@use "./scss/sections/footer";

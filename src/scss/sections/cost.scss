@@ -1,0 +1,92 @@
+@use "../settings/vars" as *;
+
+.cost {
+  background-image: url("./img/cost-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    padding: 80px 15px;
+    background-image: url("./img/iphone.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    @media (max-width: 1000px) {
+      text-align: center;
+      background: none;
+    }
+    @media (max-width: 600px) {
+      padding: 50px 15px;
+    }
+  }
+
+  &__title {
+    max-width: 573px;
+    margin-bottom: 17px;
+    font-size: 43px;
+    @media (max-width: 1000px) {
+      margin: 0 auto 17px;
+    }
+    @media (max-width: 600px) {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    max-width: 520px;
+    margin-bottom: 25px;
+    font-size: 27px;
+    line-height: 1.1;
+    font-weight: 400;
+    @media (max-width: 1000px) {
+      text-align: justify;
+      margin: 0 auto 25px;
+    }
+    @media (max-width: 600px) {
+      font-size: 20px;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 29px;
+    font-size: 41px;
+    color: $mainColor;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $red;
+    }
+    @media (max-width: 600px) {
+      font-size: 26px;
+    }
+  }
+
+  &__input {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background-color: transparent;
+
+    @media (max-width: 1000px) {
+      margin: 0 auto 15px;
+    }
+  }
+
+  &__buttons-inner {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-top: 30px;
+    @media (max-width: 1000px) {
+      justify-content: center;
+    }
+    @media (max-width: 600px) {
+      margin-top: 25px;
+      gap: 20px;
+    }
+  }
+
+  &__file-label {
+    max-width: 190px;
+    appearance: none;
+    cursor: pointer;
+  }
+}

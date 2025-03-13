@@ -1,0 +1,89 @@
+@use "../settings/vars" as *;
+.request {
+  padding-bottom: 30px;
+  background-image: url("./img/request-bg.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: calc(50% - 400px);
+  background-position-y: bottom;
+
+  @media (max-width: 600px) {
+    font-size: 26px;
+  }
+
+  &__container {
+    padding: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    margin-left: auto;
+    padding: 25px;
+    border-radius: 8px;
+    backdrop-filter: blur(15px);
+    will-change: transform;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 40px;
+    @media (max-width: 600px) {
+      font-size: 26px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__number {
+    font-size: 45px;
+    margin-bottom: 8px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    @media (max-width: 600px) {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  &__input {
+    margin-bottom: 15px;
+    background: linear-gradient(94.52deg, rgba(255, 255, 255, 0.089) 7.75%, rgba(255, 255, 255, 0) 147.28%);
+  }
+
+  &__button {
+    max-width: 400px;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
