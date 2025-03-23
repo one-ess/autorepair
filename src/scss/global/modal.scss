@@ -2,25 +2,19 @@
 
 .modal-wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: 99;
-  width: 100vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8);
   padding: 15px;
-  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   visibility: hidden;
+  overflow: hidden;
+  overflow-y: auto;
   transition: opacity 0.2s ease-in-out;
 }
 
 .modal-wrapper_active {
-  overflow-y: auto;
   opacity: 1;
   visibility: visible;
 }
@@ -32,12 +26,14 @@
   max-width: 500px;
   width: 100%;
   padding: 20px;
+  margin: auto;
   border-radius: 8px;
   background: linear-gradient(150.31deg, rgba(255, 255, 255, 0.2705) -15.73%, rgba(255, 255, 255, 0) 104.81%);
   backdrop-filter: blur(10px);
   will-change: transform;
 
   &__text {
+    padding-right: 25px;
     margin-bottom: 25px;
     text-align: center;
     @media (max-width: 500px) {
