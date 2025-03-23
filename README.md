@@ -35,4 +35,4 @@ Dev зависимости:
 
 Результат:
 
-[https://one-ess.github.io/autorepair/build/index.html](https://one-ess.github.io/autorepair/build/index.html)
+[https://autorepair-rho.vercel.app/](https://autorepair-rho.vercel.app/)
